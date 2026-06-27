@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOU IP WANG 盧燁宏 | 中英雙語個人檔案 Bilingual Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary-dark: #1a1a2e;
+      --primary-mid: #16213e;
+      --primary-light: #0f3460;
+      --accent-gold: #c9a96e;
+      --accent-gold-light: #e0c78a;
+      --accent-blue: #4a90d9;
+      --accent-green: #28a745;
+      --accent-purple: #6f42c1;
+      --accent-red: #dc3545;
+      --bg-main: #f0f2f5;
+      --bg-card: #ffffff;
+      --bg-section-alt: #f8f9fa;
+      --text-dark: #1a1a2e;
+      --text-medium: #495057;
+      --text-light: #6c757d;
+      --text-white: #ffffff;
+      --border-light: #e9ecef;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+      --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.16);
+      --shadow-gold: 0 4px 16px rgba(201, 169, 110, 0.3);
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+      --spacing-xxl: 4rem;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --radius-full: 50%;
+      --font-xs: 0.75rem;
+      --font-sm: 0.875rem;
+      --font-md: 1rem;
+      --font-lg: 1.25rem;
+      --font-xl: 1.5rem;
+      --font-2xl: 2rem;
+      --font-3xl: 2.5rem;
+      --transition-fast: 0.2s ease;
+      --transition-smooth: 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #f0f2f5 100%);
+      color: var(--text-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ============================================
+           LANGUAGE SWITCH BAR - 已修正
+           ============================================ */
+    .lang-switch-bar {
+      background: var(--primary-dark);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.6rem 2rem;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+    }
+
+    .lang-switch-bar .lang-label {
+      color: #aaa;
+      font-size: var(--font-sm);
+      white-space: nowrap;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 0.4rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: var(--transition-fast);
+      font-size: var(--font-sm);
+      white-space: nowrap;
+    }
+
+    .lang-btn.active {
+      background: var(--accent-gold);
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .lang-btn:hover {
+      background: rgba(201, 169, 110, 0.2);
+    }
+
+    .lang-btn.active:hover {
+      background: var(--accent-gold);
+    }
+
+    .hidden-lang {
+      display: none !important;
+    }
+
+    /* ============================================
+           NAVIGATION BAR - 已修正
+           ============================================ */
+    .navbar {
+      background: var(--primary-dark);
+      padding: var(--spacing-sm) var(--spacing-xl);
+      position: sticky;
+      top: 52px;
+      z-index: 1000;
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: var(--font-lg);
+      font-weight: 700;
+      color: var(--accent-gold);
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      list-style: none;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links li {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition-fast);
+      position: relative;
+      padding: 0.3rem 0;
+      cursor: pointer;
+      font-size: var(--font-sm);
+      white-space: nowrap;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gold);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active-page {
+      color: var(--accent-gold);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active-page::after {
+      width: 100%;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-white);
+      font-size: var(--font-xl);
+      cursor: pointer;
+    }
+
+    /* ============================================
+           PAGE CONTAINER
+           ============================================ */
+    .page-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) var(--spacing-lg);
+      min-height: 70vh;
+    }
+
+    .page {
+      display: none;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .page.active-page-content {
+      display: block;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ============================================
+           HERO SECTION
+           ============================================ */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-mid) 50%, var(--primary-light) 100%);
+      padding: var(--spacing-xxl) var(--spacing-xl);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-small {
+      padding: var(--spacing-xl) var(--spacing-lg);
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xl);
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-image-wrapper {
+      flex-shrink: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: var(--radius-full);
+      border: 4px solid var(--accent-gold);
+      padding: 6px;
+      background: var(--bg-card);
+      box-shadow: var(--shadow-gold);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .hero-image-wrapper.small {
+      width: 120px;
+      height: 120px;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius-full);
+    }
+
+    .hero-content h1 {
+      font-size: var(--font-3xl);
+      color: var(--text-white);
+      margin-bottom: var(--spacing-xs);
+      font-weight: 700;
+    }
+
+    .hero-content h1.small {
+      font-size: var(--font-2xl);
+    }
+
+    .hero-content .highlight {
+      color: var(--accent-gold);
+    }
+
+    .hero-content .tagline {
+      font-size: var(--font-lg);
+      color: #b0b8c1;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-md);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: var(--font-2xl);
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    .stat-label {
+      font-size: var(--font-sm);
+      color: #8899aa;
+    }
+
+    /* ============================================
+           CARDS
+           ============================================ */
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-xl);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
+      transition: var(--transition-smooth);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+
+    .card h2 {
+      font-size: var(--font-2xl);
+      color: var(--primary-dark);
+      margin-bottom: var(--spacing-lg);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding-bottom: var(--spacing-sm);
+      border-bottom: 2px solid var(--accent-gold);
+    }
+
+    .card h2 i {
+      color: var(--accent-gold);
+    }
+
+    /* ============================================
+           TIMELINE
+           ============================================ */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--accent-gold);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: var(--spacing-md);
+      padding-left: 20px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      border: 3px solid var(--bg-card);
+      box-shadow: 0 0 0 3px var(--accent-gold);
+    }
+
+    .timeline-year {
+      font-size: var(--font-sm);
+      color: var(--accent-gold);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .timeline-title {
+      font-weight: 600;
+      color: var(--text-dark);
+      font-size: var(--font-md);
+    }
+
+    .timeline-subtitle {
+      color: var(--text-light);
+      font-size: var(--font-sm);
+    }
+
+    /* ============================================
+           GRID LAYOUTS
+           ============================================ */
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: var(--spacing-md);
+    }
+
+    .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-md);
+    }
+
+    /* ============================================
+           CONTACT LIST
+           ============================================ */
+    .contact-list {
+      list-style: none;
+    }
+
+    .contact-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: var(--text-medium);
+      transition: var(--transition-fast);
+    }
+
+    .contact-list li:hover {
+      color: var(--accent-gold);
+      padding-left: 5px;
+    }
+
+    .contact-list li i {
+      color: var(--accent-gold);
+      width: 20px;
+    }
+
+    .contact-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* ============================================
+           LANGUAGE PROGRESS
+           ============================================ */
+    .language-item {
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .language-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: #e9ecef;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+    }
+
+    /* ============================================
+           PROJECT CARDS
+           ============================================ */
+    .project-card {
+      background: var(--bg-section-alt);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      border: 2px solid transparent;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent-gold);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-8px);
+    }
+
+    .project-card.featured {
+      border-color: var(--accent-gold);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: white;
+    }
+
+    .project-icon-placeholder {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3.5rem;
+    }
+
+    .project-info {
+      padding: var(--spacing-md);
+      background: white;
+    }
+
+    .project-info h4 {
+      font-size: var(--font-md);
+      color: var(--text-dark);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .project-info p {
+      font-size: var(--font-sm);
+      color: var(--text-light);
+      margin-bottom: 0.8rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: var(--font-sm);
+      transition: var(--transition-fast);
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--accent-gold);
+      border-radius: var(--radius-sm);
+    }
+
+    .project-link:hover {
+      background: var(--accent-gold);
+      color: white;
+    }
+
+    .project-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 600;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    .badge-gold {
+      background: var(--accent-gold);
+    }
+
+    .badge-blue {
+      background: var(--accent-blue);
+    }
+
+    .badge-green {
+      background: var(--accent-green);
+    }
+
+    .badge-purple {
+      background: var(--accent-purple);
+    }
+
+    .badge-red {
+      background: var(--accent-red);
+    }
+
+    /* ============================================
+           RESEARCH ITEMS
+           ============================================ */
+    .research-item {
+      background: var(--bg-section-alt);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-md);
+      border-left: 4px solid var(--accent-gold);
+      transition: var(--transition-smooth);
+    }
+
+    .research-item:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateX(5px);
+      background: #fdfaf3;
+    }
+
+    .research-item i {
+      color: var(--accent-gold);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .research-item h4 {
+      color: var(--text-dark);
+      margin-bottom: 0.3rem;
+      font-size: var(--font-md);
+    }
+
+    .research-item p {
+      font-size: var(--font-xs);
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .research-link {
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: var(--font-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .research-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ============================================
+           CERTIFICATE CARDS
+           ============================================ */
+    .certificate-card {
+      background: var(--bg-section-alt);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .certificate-card:hover {
+      border-color: var(--accent-gold);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-5px);
+    }
+
+    .certificate-card.featured {
+      border-color: var(--accent-gold);
+    }
+
+    .certificate-image {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      background: white;
+      padding: 0.5rem;
+    }
+
+    .certificate-info {
+      padding: var(--spacing-sm);
+      text-align: center;
+      background: white;
+    }
+
+    .certificate-info h4 {
+      font-size: var(--font-sm);
+      color: var(--text-dark);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .certificate-info p {
+      font-size: var(--font-xs);
+      color: var(--text-light);
+    }
+
+    .certificate-badge {
+      display: inline-block;
+      background: var(--accent-gold);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    /* ============================================
+           ACHIEVEMENT CARDS
+           ============================================ */
+    .achievement-card {
+      background: var(--bg-section-alt);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      border: 2px solid transparent;
+    }
+
+    .achievement-card:hover {
+      border-color: var(--accent-gold);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-5px);
+    }
+
+    .achievement-card.featured {
+      border-color: var(--accent-gold);
+    }
+
+    .achievement-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      background: white;
+    }
+
+    .achievement-info {
+      padding: var(--spacing-md);
+      background: white;
+      text-align: center;
+    }
+
+    .achievement-info h4 {
+      font-size: var(--font-md);
+      color: var(--text-dark);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .achievement-info p {
+      font-size: var(--font-sm);
+      color: var(--text-light);
+    }
+
+    /* ============================================
+           ABOUT TEXT
+           ============================================ */
+    .about-text p {
+      margin-bottom: var(--spacing-md);
+      color: var(--text-medium);
+      line-height: 1.9;
+      font-size: var(--font-md);
+    }
+
+    .highlight-word {
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    .dream-statement {
+      background: var(--primary-dark);
+      color: var(--text-white);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-md);
+      text-align: center;
+      font-weight: 500;
+      margin-top: var(--spacing-lg);
+    }
+
+    .dream-statement i {
+      color: var(--accent-gold);
+      margin: 0 0.3rem;
+    }
+
+    /* ============================================
+           MODAL
+           ============================================ */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      position: relative;
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      max-height: 85vh;
+      border-radius: var(--radius-md);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      color: white;
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+
+    .modal-close:hover {
+      color: var(--accent-gold);
+    }
+
+    /* ============================================
+           BACK TO TOP
+           ============================================ */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--accent-gold);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-gold);
+      transition: var(--transition-smooth);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ============================================
+           PAGE NAVIGATION BUTTONS
+           ============================================ */
+    .page-nav {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-lg);
+      flex-wrap: wrap;
+    }
+
+    .page-nav-btn {
+      background: var(--bg-section-alt);
+      border: 1px solid var(--border-light);
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: var(--transition-fast);
+      color: var(--text-dark);
+      font-size: var(--font-sm);
+    }
+
+    .page-nav-btn:hover {
+      background: var(--accent-gold);
+      color: white;
+    }
+
+    /* ============================================
+           FOOTER
+           ============================================ */
+    .footer {
+      background: var(--primary-dark);
+      color: var(--text-white);
+      text-align: center;
+      padding: var(--spacing-xl);
+      margin-top: var(--spacing-xl);
+    }
+
+    .footer p {
+      color: #8899aa;
+    }
+
+    .footer .gold-text {
+      color: var(--accent-gold);
+    }
+
+    /* ============================================
+           RESPONSIVE
+           ============================================ */
+    @media (max-width: 900px) {
+      .two-col-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        gap: 0.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--primary-dark);
+        padding: var(--spacing-md);
+        gap: 0.5rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .certificate-grid,
+      .project-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-content h1 {
+        font-size: var(--font-2xl);
+      }
+
+      .lang-switch-bar {
+        gap: 0.8rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .certificate-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lang-switch-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+      }
+
+      .nav-logo {
+        font-size: var(--font-md);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================
+    LANGUAGE SWITCH BAR - 已修正
+    ============================================ -->
+  <div class="lang-switch-bar">
+    <span class="lang-label">🌐 語言 / Language</span>
+    <button class="lang-btn active" id="btnZh" onclick="switchLanguage('zh')">🇨🇳 中文</button>
+    <button class="lang-btn" id="btnEn" onclick="switchLanguage('en')">🇬🇧 English</button>
+  </div>
+
+  <!-- ============================================
+    NAVIGATION BAR - 已修正
+    ============================================ -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="nav-logo" onclick="navigateTo('home')">LOU IP WANG 盧燁宏</a>
+      <button class="nav-toggle" onclick="toggleNav()"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a onclick="navigateTo('home')" class="active-page" data-page="home"><span class="lang-zh">🏠 首頁</span><span class="lang-en hidden-lang">🏠 Home</span></a></li>
+        <li><a onclick="navigateTo('about')" data-page="about"><span class="lang-zh">👤 關於我</span><span class="lang-en hidden-lang">👤 About</span></a></li>
+        <li><a onclick="navigateTo('education')" data-page="education"><span class="lang-zh">🎓 學經歷</span><span class="lang-en hidden-lang">🎓 Education</span></a></li>
+        <li><a onclick="navigateTo('projects')" data-page="projects"><span class="lang-zh">💻 專案</span><span class="lang-en hidden-lang">💻 Projects</span></a></li>
+        <li><a onclick="navigateTo('research')" data-page="research"><span class="lang-zh">🔬 研究</span><span class="lang-en hidden-lang">🔬 Research</span></a></li>
+        <li><a onclick="navigateTo('certificates')" data-page="certificates"><span class="lang-zh">📜 證書</span><span class="lang-en hidden-lang">📜 Certificates</span></a></li>
+        <li><a onclick="navigateTo('achievements')" data-page="achievements"><span class="lang-zh">🏆 成就</span><span class="lang-en hidden-lang">🏆 Achievements</span></a></li>
+        <li><a onclick="navigateTo('contact')" data-page="contact"><span class="lang-zh">📞 聯絡</span><span class="lang-en hidden-lang">📞 Contact</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================
+    PAGE 1: HOME
+    ============================================ -->
+  <div class="page active-page-content" id="page-home">
+    <div class="hero">
+      <div class="hero-container">
+        <div class="hero-image-wrapper">
+          <img src="https://www.image2url.com/r2/default/images/1782219805073-940230e8-cd46-4ecb-bee2-e3c0058b99e3.jpg" alt="LOU IP WANG 盧燁宏">
+        </div>
+        <div class="hero-content">
+          <h1>LOU <span class="highlight">IP WANG</span></h1>
+          <p class="tagline">
+            <span class="lang-zh">盧燁宏 · 聖若瑟教區中學（第五校）· 澳門</span>
+            <span class="lang-en hidden-lang">St. Joseph Diocesan College (The Fifth School), Macau</span>
+          </p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">9+</div>
+              <div class="stat-label"><span class="lang-zh">成就</span><span class="lang-en hidden-lang">Achievements</span></div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">3</div>
+              <div class="stat-label"><span class="lang-zh">語言</span><span class="lang-en hidden-lang">Languages</span></div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">2027</div>
+              <div class="stat-label"><span class="lang-zh">畢業</span><span class="lang-en hidden-lang">Graduation</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="card">
+        <h2><i class="fas fa-star"></i> <span class="lang-zh">歡迎來到我的個人檔案</span><span class="lang-en hidden-lang">Welcome to My Portfolio</span></h2>
+        <div class="lang-zh">
+          <p style="font-size: var(--font-lg); color: var(--text-medium); text-align: center; line-height: 2;">
+            您好！我是盧燁宏，一名來自澳門的學生，熱愛英語、音樂、體育和科技。<br>
+            請使用上方導航瀏覽我的個人檔案，了解我的學歷、專案、研究和成就。
+          </p>
+        </div>
+        <div class="lang-en hidden-lang">
+          <p style="font-size: var(--font-lg); color: var(--text-medium); text-align: center; line-height: 2;">
+            Hello! I am LOU IP WANG, a student from Macau passionate about English, music, sports, and technology.<br>
+            Please use the navigation above to explore my portfolio.
+          </p>
+        </div>
+        <div class="page-nav">
+          <button class="page-nav-btn" onclick="navigateTo('about')"><span class="lang-zh">📖 關於我</span><span class="lang-en hidden-lang">📖 About Me</span></button>
+          <button class="page-nav-btn" onclick="navigateTo('projects')"><span class="lang-zh">💻 專案</span><span class="lang-en hidden-lang">💻 Projects</span></button>
+          <button class="page-nav-btn" onclick="navigateTo('certificates')"><span class="lang-zh">📜 證書</span><span class="lang-en hidden-lang">📜 Certificates</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+    PAGE 2: ABOUT
+    ============================================ -->
+  <div class="page" id="page-about">
+    <div class="hero hero-small">
+      <div class="hero-container">
+        <div class="hero-image-wrapper small">
+          <img src="https://www.image2url.com/r2/default/images/1782219805073-940230e8-cd46-4ecb-bee2-e3c0058b99e3.jpg" alt="LOU IP WANG 盧燁宏">
+        </div>
+        <div class="hero-content">
+          <h1 class="small"><span class="lang-zh">關於我</span><span class="lang-en hidden-lang">About Me</span></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="card">
+        <div class="about-text">
+          <div class="lang-zh">
+            <p>我是<span class="highlight-word">盧燁宏</span>，一名來自澳門的專注學生，對<span class="highlight-word">英語、音樂、體育和科技</span>充滿熱情，同時積極參與手球比賽並發展編程技能。我渴望將創造力與專業技術相結合，並一直參與義工服務以幫助更多人。</p>
+            <p>對我來說，<span style="color: var(--accent-gold); font-weight: 600; font-style: italic;">「知識是無窮無盡的」</span>，我始終保持著對學習的渴望，並探索更深層次的知識。無論是什麼科目，我都希望能獲得更深入的理解。對於我感興趣的科目，我會勤奮學習。</p>
+            <p>在未來幾年，<strong>我希望以英語作為我的主修科目</strong>。我對英語的興趣源於我發現語言學習非常有趣。我相信這是一個值得深入研究的領域。</p>
+            <p>我想進入英語教育領域的原因，是因為許多朋友曾向我請教如何學習英語。我希望成為一個能夠幫助他人的人，同時也更深入地了解自己，追求我的理想。</p>
+            <div class="dream-statement">
+              <i class="fas fa-star"></i> 我最大的目標是成為一個能夠幫助更多人理解和學好英語的人，實現我成為英語教師的夢想。 <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="lang-en hidden-lang">
+            <p>I am <span class="highlight-word">LOU IP WANG</span>, a dedicated student from Macau with a passion for <span class="highlight-word">English, music, sports, and technology</span>, while actively participating in handball competitions and developing programming skills.</p>
+            <p>For me, <span style="color: var(--accent-gold); font-weight: 600; font-style: italic;">"knowledge is endless"</span>, and I always maintain a thirst for learning and exploring deeper levels of knowledge.</p>
+            <p>In the coming years, <strong>I hope to pursue English as my major</strong>. My interest in English stems from finding language learning incredibly interesting.</p>
+            <p>The reason I want to enter English education is because many friends have asked me for advice on learning English. I hope to become someone who helps others while gaining a deeper understanding of myself.</p>
+            <div class="dream-statement">
+              <i class="fas fa-star"></i> My biggest goal is to become someone who can help more people understand and learn English well, realizing my dream of becoming an English teacher. <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+    PAGE 3: EDUCATION & EXPERIENCE
+    ============================================ -->
+  <div class="page" id="page-education">
+    <div class="hero hero-small">
+      <div class="hero-container">
+        <div class="hero-image-wrapper small">
+          <img src="https://www.image2url.com/r2/default/images/1782219805073-940230e8-cd46-4ecb-bee2-e3c0058b99e3.jpg" alt="LOU IP WANG 盧燁宏">
+        </div>
+        <div class="hero-content">
+          <h1 class="small"><span class="lang-zh">學歷與經歷</span><span class="lang-en hidden-lang">Education & Experience</span></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="card">
+        <h2><i class="fas fa-graduation-cap"></i> <span class="lang-zh">學歷</span><span class="lang-en hidden-lang">Education</span></h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2021 - 2027</div>
+            <div class="timeline-title"><span class="lang-zh">聖若瑟教區中學（第五校）</span><span class="lang-en hidden-lang">St. Joseph Diocesan College (The Fifth School)</span></div>
+            <div class="timeline-subtitle"><span class="lang-zh">澳門 | 預計畢業：2027年7月</span><span class="lang-en hidden-lang">Macau | Expected Graduation: July 2027</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2><i class="fas fa-briefcase"></i> <span class="lang-zh">工作與領導經驗</span><span class="lang-en hidden-lang">Work & Leadership Experience</span></h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2025 - <span class="lang-zh">現在</span><span class="lang-en hidden-lang">Present</span></div>
+            <div class="timeline-title"><span class="lang-zh">高中學生會幹事</span><span class="lang-en hidden-lang">High School Prefect</span></div>
+            <div class="timeline-subtitle"><span class="lang-zh">領導角色，負責學生事務及指導</span><span class="lang-en hidden-lang">Leadership role with student responsibilities and mentoring</span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2021 - <span class="lang-zh">現在</span><span class="lang-en hidden-lang">Present</span></div>
+            <div class="timeline-title"><span class="lang-zh">學校手球隊</span><span class="lang-en hidden-lang">School Handball Team</span></div>
+            <div class="timeline-subtitle"><span class="lang-zh">活躍隊員 • 校際比賽 • 團隊合作</span><span class="lang-en hidden-lang">Active member • Inter-school competitions • Team collaboration</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+    PAGE 4: PROJECTS
+    ============================================ -->
+  <div class="page" id="page-projects">
+    <div class="hero hero-small">
+      <div class="hero-container">
+        <div class="hero-image-wrapper small">
+          <img src="https://www.image2url.com/r2/default/images/1782219805073-940230e8-cd46-4ecb-bee2-e3c0058b99e3.jpg" alt="LOU IP WANG 盧燁宏">
+        </div>
+        <div class="hero-content">
+          <h1 class="small"><span class="lang-zh">個人專案</span><span class="lang-en hidden-lang">Personal Projects</span></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="project-grid">
+        <div class="project-card featured">
+          <img src="https://www.image2url.com/r2/default/images/1782471598004-f3659d21-1456-40b7-982c-7da0b7c62f0c.jpg" alt="Anti-Bullying" class="project-image">
+          <div class="project-info">
+            <h4><span class="lang-zh">反欺凌宣傳影片</span><span class="lang-en hidden-lang">Anti-Bullying Propaganda Video</span></h4>
+            <p><span class="lang-zh">在學校社區推廣反欺凌訊息的社會意識宣傳影片</span><span class="lang-en hidden-lang">Social awareness campaign video promoting anti-bullying messages</span></p>
+            <span class="project-badge badge-gold"><span class="lang-zh">影片製作</span><span class="lang-en hidden-lang">Video Production</span></span>
+            <span class="project-badge badge-red"><span class="lang-zh">社會議題</span><span class="lang-en hidden-lang">Social Cause</span></span>
+            <br><br>
+            <a href="https://youtu.be/ST3ZDKJg6Lg?si=TVpfWePJ-AcUwSVU" target="_blank" class="project-link"><i class="fab fa-youtube"></i> <span class="lang-zh">在YouTube觀看</span><span class="lang-en hidden-lang">Watch on YouTube</span></a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://www.image2url.com/r2/default/images/1782470990735-9528ab1c-9aa9-421c-9efa-71982527d96d.jpg" alt="Hanoi Tower Robot" class="project-image">
+          <div class="project-info">
+            <h4><span class="lang-zh">河內塔機器人設計</span><span class="lang-en hidden-lang">Hanoi Tower Robot Design</span></h4>
+            <p><span class="lang-zh">設計能夠自主解決河內塔謎題的機器人工程及編程專案</span><span class="lang-en hidden-lang">Engineering project designing a robot to solve the Tower of Hanoi puzzle</span></p>
+            <span class="project-badge badge-green"><span class="lang-zh">機器人</span><span class="lang-en hidden-lang">Robotics</span></span>
+            <span class="project-badge badge-gold"><span class="lang-zh">工程</span><span class="lang-en hidden-lang">Engineering</span></span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-icon-placeholder" style="background: linear-gradient(135deg, #4a90d9, #2c5f8a);"><i class="fas fa-cloud-sun-rain"></i></div>
+          <div class="project-info">
+            <h4><span class="lang-zh">澳門居民對氣候變化看法之影片研究</span><span class="lang-en hidden-lang">Climate Change Perceptions Video Study</span></h4>
+            <p><span class="lang-zh">調查分析澳門居民對氣候變化的意識和態度</span><span class="lang-en hidden-lang">Research on Macao residents' awareness of climate change</span></p>
+            <span class="project-badge badge-blue"><span class="lang-zh">研究</span><span class="lang-en hidden-lang">Research</span></span>
+            <span class="project-badge badge-green"><span class="lang-zh">環境</span><span class="lang-en hidden-lang">Environment</span></span>
+            <br><br>
+            <a href="https://drive.google.com/file/d/1FMzgl_pZqwKCB4tt5IAMzmdSRIScpV5x/view?usp=sharing" target="_blank" class="project-link"><i class="fab fa-google-drive"></i> <span class="lang-zh">觀看影片</span><span class="lang-en hidden-lang">View Video</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+    PAGE 5: RESEARCH
+    ============================================ -->
+  <div class="page" id="page-research">
+    <div class="hero hero-small">
+      <div class="hero-container">
+        <div class="hero-image-wrapper small">
+          <img src="https://www.image2url.com/r2/default/images/1782219805073-940230e8-cd46-4ecb-bee2-e3c0058b99e3.jpg" alt="LOU IP WANG 盧燁宏">
+        </div>
+        <div class="hero-content">
+          <h1 class="small"><span class="lang-zh">研究報告</span><span class="lang-en hidden-lang">Research Reports</span></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="research-grid">
+        <div class="research-item">
+          <i class="fas fa-dna"></i>
+          <h4><span class="lang-zh">唐氏綜合症（Trisomy 21）多重分析及深入研究報告</span><span class="lang-en hidden-lang">Trisomy 21 (Down Syndrome) Research Reports</span></h4>
+          <p><span class="lang-zh">生物學研究專案，包含對遺傳疾病的全面分析</span><span class="lang-en hidden-lang">Biology research with comprehensive genetic analysis</span></p>
+          <a href="https://cyrus0606.github.io/F5B_21_23_26_BiologyExamProject/" target="_blank" class="research-link"><i class="fas fa-external-link-alt"></i> <span class="lang-zh">查看研究網站</span><span class="lang-en hidden-lang">View Research Website</span></a>
+        </div>
+        <div class="research-item">
+          <i class="fas fa-file-alt"></i>
+          <h4><span class="lang-zh">氣候變化認知研究 - 書面報告</span><span class="lang-en hidden-lang">Climate Change Perceptions Study</span></h4>
+          <p><span class="lang-zh">澳門居民氣候變化認知的書面分析報告</span><span class="lang-en hidden-lang">Documented analysis of Macao residents' climate change perceptions</span></p>
+          <a href="https://docs.google.com/document/d/1U1Sy1iHFSCuHQS8zJUSfnbJ6d9T8T4jOV90l8QRM01I/edit?usp=sharing" target="_blank" class="research-link"><i class="fas fa-external-link-alt"></i> <span class="lang-zh">查看報告</span><span class="lang-en hidden-lang">View Report</span></a>
+        </div>
+        <div class="research-item">
+          <i class="fas fa-heart"></i>
+          <h4><span class="lang-zh">網絡對戀愛關係影響之研究</span><span class="lang-en hidden-lang">Internet's Influence on Romantic Relationships</span></h4>
+          <p><span class="lang-zh">探索數位通訊和互聯網如何塑造現代戀愛關係</span><span class="lang-en hidden-lang">How digital communication shapes modern relationships</span></p>
+          <a href="https://docs.google.com/document/d/1U1Sy1iHFSCuHQS8zJUSfnbJ6d9T8T4jOV90l8QRM01I/edit?usp=sharing" target="_blank" class="research-link"><i class="fas fa-external-link-alt"></i> <span class="lang-zh">查看報告</span><span class="lang-en hidden-lang">View Report</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+    PAGE 6: CERTIFICATES
+    ============================================ -->
+  <div class="page" id="page-certificates">
+    <div class="hero hero-small">
+      <div class="hero-container">
+        <div class="hero-image-wrapper small">
+          <img src="https://www.image2url.com/r2/default/images/1782219805073-940230e8-cd46-4ecb-bee2-e3c0058b99e3.jpg" alt="LOU IP WANG 盧燁宏">
+        </div>
+        <div class="hero-content">
+          <h1 class="small"><span class="lang-zh">證書與獎項</span><span class="lang-en hidden-lang">Certificates & Awards</span></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="certificate-grid" id="js-certificate-grid"></div>
+      <p style="text-align: center; margin-top: 1rem; color: var(--text-light); font-size: var(--font-sm);">
+        <i class="fas fa-info-circle"></i> <span class="lang-zh">點擊任何證書以查看全尺寸圖片</span><span class="lang-en hidden-lang">Click any certificate to view full size</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================================
+    PAGE 7: ACHIEVEMENTS
+    ============================================ -->
+  <div class="page" id="page-achievements">
+    <div class="hero hero-small">
+      <div class="hero-container">
+        <div class="hero-image-wrapper small">
+          <img src="https://www.image2url.com/r2/default/images/1782219805073-940230e8-cd46-4ecb-bee2-e3c0058b99e3.jpg" alt="LOU IP WANG 盧燁宏">
+        </div>
+        <div class="hero-content">
+          <h1 class="small"><span class="lang-zh">成就</span><span class="lang-en hidden-lang">Achievements</span></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="project-grid">
+        <div class="achievement-card featured">
+          <img src="https://www.image2url.com/r2/default/images/1782471041180-f36d1669-f1d9-44a2-ab81-599a31b4cdf5.jpg" alt="Basketball 3rd Place" class="achievement-image">
+          <div class="achievement-info">
+            <h4><span class="lang-zh">校際籃球比賽 - 季軍</span><span class="lang-en hidden-lang">Third Place - Inter-school Basketball Tournament</span></h4>
+            <p><span class="lang-zh">在競爭激烈的校際籃球比賽中獲得第三名</span><span class="lang-en hidden-lang">Achieved 3rd place in competitive inter-school basketball</span></p>
+            <span class="project-badge badge-gold"><span class="lang-zh">體育</span><span class="lang-en hidden-lang">Sports</span></span>
+            <span class="project-badge badge-blue"><span class="lang-zh">籃球</span><span class="lang-en hidden-lang">Basketball</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+    PAGE 8: CONTACT
+    ============================================ -->
+  <div class="page" id="page-contact">
+    <div class="hero hero-small">
+      <div class="hero-container">
+        <div class="hero-image-wrapper small">
+          <img src="https://www.image2url.com/r2/default/images/1782219805073-940230e8-cd46-4ecb-bee2-e3c0058b99e3.jpg" alt="LOU IP WANG 盧燁宏">
+        </div>
+        <div class="hero-content">
+          <h1 class="small"><span class="lang-zh">聯絡資料</span><span class="lang-en hidden-lang">Contact</span></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="two-col-grid">
+        <div class="card">
+          <h2><i class="fas fa-address-card"></i> <span class="lang-zh">聯絡方式</span><span class="lang-en hidden-lang">Contact Info</span></h2>
+          <ul class="contact-list">
+            <li><i class="fas fa-user"></i> <span class="lang-zh">盧燁宏</span><span class="lang-en hidden-lang">LOU IP WANG</span></li>
+            <li><i class="fas fa-phone"></i> +853 6397 7269</li>
+            <li><i class="fas fa-envelope"></i> loumartin499@gmail.com</li>
+            <li><i class="fas fa-user-graduate"></i> <span class="lang-zh">高中五年級學生</span><span class="lang-en hidden-lang">Form 5 Student</span></li>
+            <li><i class="fas fa-map-marker-alt"></i> <span class="lang-zh">中國澳門</span><span class="lang-en hidden-lang">Macau, China</span></li>
+            <li><i class="fas fa-school"></i> <span class="lang-zh">聖若瑟教區中學（第五校）</span><span class="lang-en hidden-lang">St. Joseph Diocesan College</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2><i class="fas fa-language"></i> <span class="lang-zh">語言能力</span><span class="lang-en hidden-lang">Languages</span></h2>
+          <div class="language-item">
+            <div class="language-header"><span><span class="lang-zh">粵語</span><span class="lang-en hidden-lang">Cantonese</span></span><span><span class="lang-zh">母語</span><span class="lang-en hidden-lang">Native</span></span></div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div class="language-item">
+            <div class="language-header"><span><span class="lang-zh">普通話</span><span class="lang-en hidden-lang">Mandarin</span></span><span><span class="lang-zh">流利</span><span class="lang-en hidden-lang">Fluent</span></span></div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="language-item">
+            <div class="language-header"><span><span class="lang-zh">英語</span><span class="lang-en hidden-lang">English</span></span><span><span class="lang-zh">流利</span><span class="lang-en hidden-lang">Fluent</span></span></div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img id="modalImg" src="" alt="Certificate Preview">
+    </div>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <div class="back-to-top" id="backToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 <span class="gold-text">LOU IP WANG 盧燁宏</span>. <span class="lang-zh">版權所有</span><span class="lang-en hidden-lang">All Rights Reserved</span>.</p>
+  </footer>
+
+  <script>
+    let currentLang = 'zh';
+    let currentPage = 'home';
+    const portfolioCertificates = [{
+        titleZh: "五級鋼琴演奏",
+        titleEn: "GRADE 5 Piano Performance",
+        issuer: "ABRSM",
+        year: "2021",
+        badgeZh: "音樂",
+        badgeEn: "Music",
+        isFeatured: true,
+        imageUrl: "https://www.image2url.com/r2/default/images/1782218985485-7adfdf6c-9364-4e42-b426-0e963f3bc7fd.jpg"
+      },
+      {
+        titleZh: "五級樂理",
+        titleEn: "GRADE 5 Music Theory",
+        issuer: "ABRSM",
+        year: "2021",
+        badgeZh: "樂理",
+        badgeEn: "Theory",
+        isFeatured: false,
+        imageUrl: "https://www.image2url.com/r2/default/images/1782218930376-9bb876aa-b5a1-45a9-9401-4c6561a4255e.jpg"
+      },
+      {
+        titleZh: "校際手球比賽",
+        titleEn: "Inter-school Handball Competition",
+        issuerZh: "澳門學校聯賽",
+        issuerEn: "Macau Schools",
+        year: "2023/2024",
+        badgeZh: "體育",
+        badgeEn: "Sports",
+        isFeatured: false,
+        imageUrl: "https://www.image2url.com/r2/default/images/1782219038933-0410ef8b-5441-43b5-9e4b-a06b300611e3.jpg"
+      },
+      {
+        titleZh: "MOS PowerPoint",
+        titleEn: "MOS PowerPoint",
+        issuer: "Microsoft",
+        year: "2024",
+        badgeZh: "MOS",
+        badgeEn: "MOS",
+        isFeatured: false,
+        imageUrl: "https://www.image2url.com/r2/default/images/1782218021729-92933c8b-5691-44ad-9536-e4527ab9e659.jpg"
+      },
+      {
+        titleZh: "MOS Excel",
+        titleEn: "MOS Excel 2019 Associate",
+        issuer: "Microsoft",
+        year: "2024",
+        badgeZh: "MOS",
+        badgeEn: "MOS",
+        isFeatured: false,
+        imageUrl: "https://www.image2url.com/r2/default/images/1782218114335-c9b310ab-d5fa-4eb1-8ef9-d0f45d04a5ce.jpg"
+      }
+    ];
+
+    function switchLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('.lang-zh').forEach(el => el.classList.add('hidden-lang'));
+      document.querySelectorAll('.lang-en').forEach(el => el.classList.add('hidden-lang'));
+      if (lang === 'zh') {
+        document.querySelectorAll('.lang-zh').forEach(el => el.classList.remove('hidden-lang'));
+        document.getElementById('btnZh').classList.add('active');
+        document.getElementById('btnEn').classList.remove('active');
+      } else {
+        document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('hidden-lang'));
+        document.getElementById('btnEn').classList.add('active');
+        document.getElementById('btnZh').classList.remove('active');
+      }
+      renderCertificates();
+    }
+
+    function navigateTo(pageName) {
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active-page-content'));
+      const targetPage = document.getElementById('page-' + pageName);
+      if (targetPage) {
+        targetPage.classList.add('active-page-content');
+        targetPage.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+      document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active-page'));
+      const activeLink = document.querySelector(`.nav-links a[data-page="${pageName}"]`);
+      if (activeLink) activeLink.classList.add('active-page');
+      document.getElementById('navLinks').classList.remove('active');
+      currentPage = pageName;
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    function renderCertificates() {
+      const gridContainer = document.getElementById('js-certificate-grid');
+      if (!gridContainer) return;
+      gridContainer.innerHTML = '';
+      portfolioCertificates.forEach(cert => {
+        const cardClass = cert.isFeatured ? 'certificate-card featured' : 'certificate-card';
+        const title = currentLang === 'zh' ? cert.titleZh : cert.titleEn;
+        const issuerDisplay = currentLang === 'zh' ? (cert.issuerZh || cert.issuer) : (cert.issuerEn || cert.issuer);
+        const badge = currentLang === 'zh' ? cert.badgeZh : cert.badgeEn;
+        gridContainer.insertAdjacentHTML('beforeend', `
+                    <div class="${cardClass}" onclick="openModal('${cert.imageUrl}')">
+                        <img src="${cert.imageUrl}" alt="${title}" class="certificate-image">
+                        <div class="certificate-info">
+                            <h4>${title}</h4>
+                            <p>${issuerDisplay} · ${cert.year}</p>
+                            <span class="certificate-badge">${badge}</span>
+                        </div>
+                    </div>
+                `);
+      });
+    }
+
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    function openModal(imgSrc) {
+      document.getElementById('modalImg').src = imgSrc;
+      document.getElementById('modalOverlay').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('active');
+    }
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+    window.addEventListener('scroll', () => {
+      const backToTop = document.getElementById('backToTop');
+      backToTop.classList.toggle('visible', window.scrollY > 500);
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      renderCertificates();
+    });
+  </script>
+</body>
+
+</html>
